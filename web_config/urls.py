@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from restapi import views as restapitest
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(" ",restapi.view.home, name='home'),
+    path('',restapitest.home, name='home'),
 ]
