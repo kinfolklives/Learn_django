@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from restapi import views as restapitest
 from hello import views as helloview
+from organization import views as orview
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,7 @@ urlpatterns = [
     path("hello/responsewithhtml/", helloview.responsewithhtml),
     path("hello/responsewithhtml02/", helloview.responsewithhtml02),
     path("hello/form/", helloview.form, name = "helloform"),
+    path("organization/name/", orview.name),
+    path("hello/template/", helloview.template, name = "template"),
+
 ]

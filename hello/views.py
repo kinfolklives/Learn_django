@@ -20,4 +20,8 @@ def responsewithhtml02(request):
     data = dict()
     data["first"] = request.GET['first'];
     data["second"] = request.GET['second']
-    return render(request, 'hello/responsewithhtml.html', context=data)
+    return render(request, 'hello/responsewithhtml02.html', context=data)
+
+def template(request):
+    return render (request, 'hello/template.html')
+
