@@ -31,5 +31,4 @@ urlpatterns = [
     path("organization/tel/", orview.tel),
     path("organization/address/", orview.address),
     path("hello/template/", helloview.template, name = "template"),
-
 ]
