@@ -4,8 +4,8 @@ from django.shortcuts import render
 def name(request):
     return render(request, 'organization/name.html')
     
-def tel():
+def tel(request):
     return render(request, 'organization/tel.html')
 
-def address():
+def address(request):
     return render(request, 'organization/address.html')

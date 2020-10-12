@@ -28,6 +28,8 @@ urlpatterns = [
     path("hello/responsewithhtml02/", helloview.responsewithhtml02),
     path("hello/form/", helloview.form, name = "helloform"),
     path("organization/name/", orview.name),
+    path("organization/tel/", orview.tel),
+    path("organization/address/", orview.address),
     path("hello/template/", helloview.template, name = "template"),
 
 ]
