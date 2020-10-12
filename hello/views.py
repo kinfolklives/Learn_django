@@ -11,4 +11,4 @@ def home(request):
 
 def responsewithhtml(request):
     data = {'first':'Eugene', 'second':'Choi'} # add
-    return rendedr(request, 'hello/responsewithhtml.html', context=data)
+    return render(request, 'hello/responsewithhtml.html', context=data)
