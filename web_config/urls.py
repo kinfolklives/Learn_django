@@ -18,7 +18,7 @@ from django.urls import path
 from restapi import views as restapitest
 from hello import views as helloview
 from organization import views as orview
-
+from board import views as boardview
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',restapitest.home, name='home'),
@@ -31,4 +31,5 @@ urlpatterns = [
     path("organization/tel/", orview.tel),
     path("organization/address/", orview.address),
     path("hello/template/", helloview.template, name = "template"),
+    path("board/listwithmongo/", boardview.listwithmongo), # add 
 ]
