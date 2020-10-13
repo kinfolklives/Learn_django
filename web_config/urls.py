@@ -19,6 +19,7 @@ from restapi import views as restapitest
 from hello import views as helloview
 from organization import views as orview
 from board import views as boardview
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',restapitest.home, name='home'),
