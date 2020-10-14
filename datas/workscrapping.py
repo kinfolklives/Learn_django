@@ -7,7 +7,6 @@ from selenium import webdriver
 import schedule
 import time
 
-
 def insertDB(data):
         with MongoClient('mongodb://127.0.0.1:27017/') as client: 
                 myworkdb = client['mytest']
@@ -23,7 +22,7 @@ def Scrap():
         search_form = driver.find_element_by_name("topQuery")
         search_box = search_form.find_elements_by_css_selector("#topQuery")
         search_form.send_keys("AI")
-        search_bnt = driver.find_element_by_css_selector("#searchFrm > div.header-search > a").click
+        search_bnt = driver.find_element_by_css_selector("#searchFrm > div.header-search > a").click()
         
         for i in range(0, 11):
                 data = {}
@@ -40,11 +39,10 @@ def Scrap():
                 except Exception as e:
                         pass
                 
-                print(data)     
+                print(data)
                 insertDB(data)
-print(datetime.datetime.now())
-                   
-schedule.every(10).seconds.do(Scrap)
+                
+schedule.every(12).hours.do(Scrap)
 while True:
     schedule.run_pending()
     time.sleep(1)
