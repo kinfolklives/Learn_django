@@ -9,3 +9,12 @@ def listwithmongo(request):
         result = list(mydb.economic.find({})) # get Collection with find()
         data['page_obj'] = result
     return render(request, 'board/listwithmongo.html', context=data)
+
+
+def workDB(request):
+    data = request.GET.copy()
+    with MongoClient("mongodb://127.0.0.1:27017/") as client:
+        myworkdb=client.mytest
+        result = list(mydb.test.find({})) # get Collection with find()
+        data['page_obj'] = result
+    return render(request, 'work/workdb.html', context=data)

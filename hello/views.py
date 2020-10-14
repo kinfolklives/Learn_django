@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render # add
+from datas import workscrapping
 
 # Create your views here.
 def hello(request):
